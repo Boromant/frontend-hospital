@@ -13,7 +13,7 @@ module.exports = {
       purple: "#A96DE0"
     },
     fontFamily: {
-      'montserrat': 'Montserrat'
+      'montserrat': ['Montserrat', 'Arial']
     }
   },
   plugins: [],

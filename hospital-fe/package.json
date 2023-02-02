@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
+    "axios": "^1.2.5",
     "core-js": "^3.8.3",
     "hospital-lib": "file:../hospital-lib",
     "postcss": "^8.4.21",

@@ -5,23 +5,23 @@
       <div class="flex flex-row">
         <div class="flex flex-col w-1/2 m-auto p-1">
           <p class="mx-auto pb-4 text-xl">Before</p>
-          <div class="flex flex-row justify-between px-4 overflow-hidden">
+          <div class="flex flex-col sm:flex-row justify-between px-4">
             <div class="flex flex-col">
               <p class="mx-auto">Patients</p>
-              <PatientsCard :states="results.before.states" :numbers="results.before.numbers"/>
+              <PatientsCard class="text-xs sm:text-base" :states="results.before.states" :numbers="results.before.numbers"/>
             </div>
             <div class="flex flex-col">
               <p class="mx-auto">Drugs</p>
-              <DrugsCard :drugs="results.before.drugs"/>
+              <DrugsCard class="text-xs sm:text-base" :drugs="results.before.drugs"/>
             </div>
           </div>
         </div>
         <i class="fa-solid fa-chevron-right fa-2xl my-auto px-4"></i>
         <div class="flex flex-col w-1/3 m-auto p-1">
           <p class="mx-auto pb-4 text-xl">After</p>
-          <div class="flex flex-col overflow-hidden">
+          <div class="flex flex-col">
             <p class="mx-auto">Patients</p>
-              <PatientsCard :states="results.before.states" :numbers="results.after.numbers"/>
+              <PatientsCard class="text-xs sm:text-base" :states="results.before.states" :numbers="results.after.numbers"/>
           </div>
         </div>
       </div>

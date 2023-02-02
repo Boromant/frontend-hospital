@@ -16,7 +16,7 @@
     "webpack-cli": "4.9.2"
   },
   "scripts": {
-    "build:dev": "rd /s /q dist && webpack --config ./config/webpack.config.js --mode development",
+    "build:dev": "webpack --config ./config/webpack.config.js --mode development",
     "build:prod": "rd /s /q dist && webpack --config ./config/webpack.config.js --mode production",
     "test": "ts-node --project ./tsconfig.json ./config/run-test"
   }
