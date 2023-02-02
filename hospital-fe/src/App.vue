@@ -42,13 +42,17 @@ import DrugsCard from './components/DrugsCard.vue'
 import axios from 'axios'
 
 import { Quarantine } from 'hospital-lib'
+import { PatientsRegister } from 'hospital-lib'
+
+let patients = new PatientsRegister(new Map({F: 1, H: 2, D: 3, T: 1, X: 0}))
+let quarantine = new Quarantine(patients)
 
 export default {
   name: 'App',
   components: {
     SimulationCard,
     PatientsCard,
-    DrugsCard
+    DrugsCard,
   },
   data() {
     return {
@@ -82,11 +86,13 @@ export default {
     },
 
     simulate(drugs) {
-      let quarantine = new Quarantine({F: 1, H: 2, D: 3, T: 1, X: 0})
-      quarantine.setDrugs(drugs)
-      quarantine.wait40Days()
-      console.log(quarantine.report().values())
-      return [0,0,0,0,7]
+      
+      console.log(quarantine, drugs)
+      //let quarantine = new Quarantine({F: 1, H: 2, D: 3, T: 1, X: 0})
+      //quarantine.setDrugs(drugs)
+      //quarantine.wait40Days()
+      //console.log(quarantine.report().values())
+      //return [0,0,0,0,7]
     },
 
     // SERVER DATA
